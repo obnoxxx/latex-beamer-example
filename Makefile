@@ -1,0 +1,5 @@
+
+
+
+test.pdf:
+	pdflatex test
