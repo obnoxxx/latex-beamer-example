@@ -1,11 +1,10 @@
 
-.PHONY: pdf
 
 .SUFFIXES: .tex .pdf
 
 .tex.pdf:
 	@pdflatex $<
 
-pdf: test.pdf
+.PHONY: pdf
+pdf: pres.pdf
 
-#test.pdf:
