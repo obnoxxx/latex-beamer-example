@@ -4,6 +4,7 @@
 \title{Presentation on  topic XXX}
 \author{obnox}
 \begin{document}
+    \setbeamercovered{transparent}
     \maketitle
     \begin{frame}
 	    \frametitle{This is the first slide}
@@ -25,11 +26,11 @@
     \end{frame}
     \begin{frame}
         \frametitle{another slide}
-        \framesubtitle{demo of lists}
+        \framesubtitle{demo of uncovering list items}
         \begin{itemize}
-          \item an item.
-          \item another item.
-          \item guess what.
+          \item<1> an item.
+          \item<2> another item.
+          \item<3> guess what.
         \end{itemize}
     \end{frame}
 \end{document}
