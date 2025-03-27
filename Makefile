@@ -4,7 +4,7 @@ SHELL=/bin/sh
 SOURCE=pres.tex
 FILES=$(wildcard pres.*)
 
-GENERATED=$(patsubst pres.tex,  , $(FILES)
+GENERATED=$(patsubst pres.tex,  , $(FILES))
 
 
 .SUFFIXES: .tex .pdf
