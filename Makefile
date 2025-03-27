@@ -33,5 +33,3 @@ show: pres
 clean:
 	@rm -f $(generated)
 
-show: pres
-	@$(VIEWER) pres.pdf
