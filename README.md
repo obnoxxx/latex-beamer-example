@@ -20,7 +20,7 @@ Example:
 
 ```console
 
-$ builbo -l latex -o ubuntu -0b -s "make pres"
+$ builbo -l latex -o ubuntu -b -s "make pres"
 
 ```
 
