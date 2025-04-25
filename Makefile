@@ -31,5 +31,5 @@ show: pres
 .PHONY: clean
 
 clean:
-	@rm -f $(generated)
+	@rm -f $(GENERATED)
 
