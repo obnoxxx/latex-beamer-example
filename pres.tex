@@ -1,11 +1,32 @@
 % essentially from https://en.wikibooks.org/wiki/LaTeX/Presentations
 \documentclass[10pt]{beamer}
+
+\usetheme{Goettingen}
+\usecolortheme{wolverine}
+
 % Add extra packages here
+%\usepackage{pgfpages}
+\usepackage{hyperref}
+%% configure display of speaker notes:
+%% see https://brandonrozek.com/blog/notes-beamer-latex/
+\setbeameroption{hide notes} % Only slides
+%\setbeameroption{show only notes} % Only notes
+%\setbeameroption{show notes on second screen=right} % Both
+
+
 \title{Presentation on  topic XXX}
-\author{obnox}
+\author{Michael Adam (\href{mailto:obnox@samba.org}{obnox@samba.org})}
 \begin{document}
     \setbeamercovered{transparent}
     \maketitle
+
+    \note{Welcome}
+    \note{example beamer slides}
+
+
+    \section{slides (frames) and lists}
+
+
     \begin{frame}
 	    \frametitle{This is the first slide}
 		Here you can put any text/equation etc. 
@@ -14,12 +35,14 @@
 
         some formula: $a^2 + b^2 = c^2$.
 
+        \note[item]{example LaTeX beamer slides.}
+        \note[item]{beautiful output, plain text source, SCM}
 
     \end{frame}
 	\begin{frame}
 		\frametitle{This is the second slide}
 		\framesubtitle{A bit more information about this}
-		Some random text.		
+		Some random text.
 
         more formula: $\sum_{i=1}^{n}i = \frac{n(n+1)}{2}$.
 
@@ -28,9 +51,22 @@
         \frametitle{another slide}
         \framesubtitle{demo of uncovering list items}
         \begin{itemize}
-          \item<1> an item.
-          \item<2> another item.
-          \item<3> guess what.
+          \item<2-> an item.
+          \item<3-> another item.
+          \item<4-> guess what.
         \end{itemize}
     \end{frame}
 \end{document}
+
+\section{more features}
+
+\begin{frame}
+\frametitle{blocks/text boxes}
+\begin{block}{some text block in a box}
+
+This is the text in the box
+
+It can be any text and \LaTeX\ code.
+
+\end{block}
+\end{frame}
