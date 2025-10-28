@@ -1,8 +1,9 @@
 % essentially from https://en.wikibooks.org/wiki/LaTeX/Presentations
 \documentclass[10pt]{beamer}
 
+\usetheme{Madrid}
 \usetheme{Goettingen}
-\usecolortheme{wolverine}
+%\usecolortheme{dolphin}
 
 % Add extra packages here
 %\usepackage{pgfpages}
@@ -14,54 +15,52 @@
 %\setbeameroption{show notes on second screen=right} % Both
 
 
-\title{Presentation on  topic XXX}
+\title{Presentation on  topic FooBar}
 \author{Michael Adam (\href{mailto:obnox@samba.org}{obnox@samba.org})}
 \begin{document}
     \setbeamercovered{transparent}
     \maketitle
 
-    \note{Welcome}
-    \note{example beamer slides}
+%    \note{Welcome}
+%    \note{example beamer slides}
 
+
+\section*{agenda}
+\addcontentsline{toc}{section}{agenda}
+\begin{frame}{agenda}{table of contents}
+
+\tableofcontents
+
+\end{frame}
 
     \section{slides (frames) and lists}
-
-
-    \begin{frame}
-	    \frametitle{This is the first slide}
+    \begin{frame}{This is the first ireal slide}
 		Here you can put any text/equation etc. 
 
-        writing slides in \LaTeX.
+        writing slides in \LaTeX\ .
 
         some formula: $a^2 + b^2 = c^2$.
 
-        \note[item]{example LaTeX beamer slides.}
-        \note[item]{beautiful output, plain text source, SCM}
+%        \note[item]{example LaTeX beamer slides.}
+%        \note[item]{beautiful output, plain text source, SCM}
 
     \end{frame}
-	\begin{frame}
-		\frametitle{This is the second slide}
-		\framesubtitle{A bit more information about this}
+	\begin{frame}{This is the second slide}{A bit more information about this}
 		Some random text.
 
         more formula: $\sum_{i=1}^{n}i = \frac{n(n+1)}{2}$.
 
     \end{frame}
-    \begin{frame}
-        \frametitle{another slide}
-        \framesubtitle{demo of uncovering list items}
+    \begin{frame}{another slide}{demo of uncovering list items}
         \begin{itemize}
           \item<2-> an item.
           \item<3-> another item.
           \item<4-> guess what.
         \end{itemize}
     \end{frame}
-\end{document}
 
-\section{more features}
-
-\begin{frame}
-\frametitle{blocks/text boxes}
+\section{more features(blocks/text boxes) }
+\begin{frame}{yet another slide}
 \begin{block}{some text block in a box}
 
 This is the text in the box
@@ -70,3 +69,4 @@ It can be any text and \LaTeX\ code.
 
 \end{block}
 \end{frame}
+\end{document}
