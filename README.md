@@ -7,6 +7,8 @@ This project is similar to its companion projects https://github.com/obnoxxx/lat
 and https://github.com/obnoxxx/latex-wiki2beamer-example for LaTeX beamer presentations using the wiki2beamer preprocessor
 
 
+## Building
+
 On a system (e. g. Linux or MacOS) with LaTeX  and GNU make installed, the presentation pdf can be created from the
 source file https://github.com/obnoxxx/latex-beamer-example/blob/main/pres.tex  like so:
 
@@ -14,9 +16,18 @@ source file https://github.com/obnoxxx/latex-beamer-example/blob/main/pres.tex  
 
 $ make pres
 
-```
+``
 
-People who do not want to install the LaTeX tools on their host can use the
+or equivalently
+
+``console
+
+$ make pdf
+
+``
+
+
+People who do not want to install the LaTeX tools on their system can use the
 [buildbox](https://github.com/TheBuildBox/buildbox) project to render the slides in a container with a prebuilt container image.
 Example:
 
@@ -28,6 +39,7 @@ $ builbo -l latex -o ubuntu -b -s "make pres"
 
 this assumes that the `builbo` cli from the buildbox project is available in the host's `PATH`
 
+## Viewing
 
-The resulting `pres.pdf` can be opened in any PDF  viewer. e. g. `evince`on Linux and `open` on macOS.
+The resulting `pres.pdf` can be viewed in and presented with common PDF viewers, e. g. `evince` on Linux and `open` on macOS.
 
