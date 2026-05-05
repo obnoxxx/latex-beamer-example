@@ -16,15 +16,16 @@ source file https://github.com/obnoxxx/latex-beamer-example/blob/main/pres.tex  
 
 $ make pres
 
-``
+```
 
 or equivalently
 
-``console
+```console
 
 $ make pdf
 
-``
+```
+
 
 
 People who do not want to install the LaTeX tools on their system can use the
