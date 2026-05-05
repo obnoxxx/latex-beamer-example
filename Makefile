@@ -1,11 +1,15 @@
 
 SHELL=/bin/sh
 
-SOURCE=pres.tex
-FILES=$(wildcard pres.*)
+BASE := pres
 
-GENERATED=$(patsubst pres.tex,  , $(FILES))
+SOURCE := $(BASE).tex
+	TARGET := $(BASE).pdf
+	FILES := $(wildcard $(BASE).*)
 
+GENERATED := $(patsubst $(SOURCE),  , $(FILES))
+
+.DEFAULT_GOAL := all
 
 .SUFFIXES: .tex .pdf
 
@@ -16,20 +20,27 @@ GENERATED=$(patsubst pres.tex,  , $(FILES))
 .PHONY: info
 
 info:
-		@echo generated files: $(GENERATED)
+	@echo          source: $(SOURCE)
 
-.PHONY: pres
+	@echo          target: $(TARGET)
+	@echo generated files: $(GENERATED)
+
+
+.PHONY: all
+all: pdf
+
+.PHONY:$(BASE)
 pres: pdf
 .PHONY: pdf
-pdf: clean pres.pdf
+pdf: clean $(TARGET)
 
 
 
-show: pres
-	@$(VIEWER) pres.pdf
+.PHONY: show
+show: $(TARGET)
+	@$(VIEWER) $(TARGET)
 
 .PHONY: clean
-
 clean:
 	@rm -f $(GENERATED)
 
