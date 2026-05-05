@@ -27,5 +27,5 @@ $ builbo -l latex -o ubuntu -b -s "make pres"
 this assumes that the `builbo` cli from the buildbox project is available in the host's `PATH`
 
 
-The resulting `pres.pdf` can be opened in any PDF  viewer. e. g. `evince`on Linux.
+The resulting `pres.pdf` can be opened in any PDF  viewer. e. g. `evince`on Linux and `open` on macOS.
 
